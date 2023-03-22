@@ -15,7 +15,7 @@ const About = () => {
                 career in freelance music journalism before going back to school in 2021 to complete my degree in Full-Stack Development.
             </p>
             <p className='pr-4 max-w-2xl mx-auto'>
-                When I'm not working on web applications or updating the HenHouse website, you can find me surfing, playing music in my local bands
+                When I am not working on web applications or updating the HenHouse website, you can find me surfing, playing music in my local bands
                 or travelling the world with my partner. 
             </p>
         </div>
