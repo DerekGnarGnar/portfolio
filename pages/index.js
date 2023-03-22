@@ -1,10 +1,18 @@
 import Head from "next/head";
-import Image from "next/image";
+import About from "../components/About";
+import Experience from "../components/Experience";
+import HomePage from "../components/HomePage";
+import Portfolio from "../components/Portfolio";
+import Contact from "../components/Contact";
 
 export default function Home() {
   return (
     <div>
-      <h1 className="font-bold text-5xl text-red-500"></h1>
+      <HomePage />
+      <Portfolio />
+      <Experience />
+      <About />
+      <Contact />
     </div>
   );
 }
