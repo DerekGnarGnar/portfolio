@@ -61,7 +61,7 @@ const OnePortfolio = ({portfolio: {title, imageSrc}}) => {
         <h2 className="text-center md:text-left my-4 text-2xl font-bold">
           Description
         </h2>
-        <p>Here's a bunch of stuff</p>
+        <p>I will put some more text in here</p>
         <div className="flex items-center justify-center gap-10">
           <Link href="/">
             <div className="group flex items-center justify-center my-8 bg-blue-500 text-white px-6 py-3 font-bold uppercase rounded-md tracking-wider cursor-pointer">
