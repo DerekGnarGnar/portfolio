@@ -51,8 +51,7 @@ const Navbar = () => {
   return (
     <div
       className={`w-full h-20 z-10 fixed duration-300 ease-in ${
-        pageScroll ? "bg-black text-[#fff]" :  " bg-white text-black"
-      }`}
+        pageScroll ? "bg-black text-[#fff]" :  " bg-white text-black" }`}
     >
       <div className="flex justify-between items-center w-full h-full max-w-screen-xl mx-auto p-4">
         <Link href="/#home">
@@ -104,7 +103,7 @@ const Navbar = () => {
                   onClick={() => setNavigation(false)}
                   className="text-3xl font-bold uppercase underline underline-offset-2 tracking-wider cursor-pointer"
                 >
-                  yash
+                  Derek
                 </h2>
               </Link>
               <div
