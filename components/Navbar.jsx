@@ -20,7 +20,7 @@ const Navbar = () => {
       setPageScroll(false);
     }
 
-    window.addEventListener("scroll", handleScroll);
+    document.body.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
  
   }, []);
