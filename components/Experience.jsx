@@ -56,31 +56,35 @@ const Experience = () => {
 
   return (
     <div id='experience' className='w-full'>
-        <div className='max-w-screen-xl mx-auto px-8 py-16 text-center md:text-left'>
-        <h2 className='text-5xl md:text-7xl tracking-wider uppercase text-blue-500 font-bold'>Experience</h2>
-        <p className='py-4 max-w-lg'>
+          <div className="max-w-screen-xl mx-auto px-8 py-16 text-center md:text-left">
+          <h2 className="text-5xl md:text-7xl tracking-wider uppercase text-blue-500 font-bold">
+            Experience
+        </h2>
+        <p className="py-4 max-w-lg">
           Check out some of the projects that I have gotten to work on recently!
         </p>
-    <div className='grid lg:grid-cols-4 gap-8'>
+
+        <div className="grid lg:grid-cols-4 gap-8">
         {
             experiences.map(({id, title, source }) =>
 
             (
-                <div key={id} className='flex flex-col  lg:flex-row gap-10 lg:gap-0 items-center justify-between p-6 shadow-lg rounded-xl hover:scale-105 ease-in duration-300 odd:shadow-rose-400 even:shadow-blue-500'>
+                <div
+              key={id}
+              className="flex flex-col lg:flex-wrap gap-10 lg:gap-0 items-center justify-between p-6 shadow-lg rounded-xl hover:scale-105 ease-in duration-300
+              odd:shadow-rose-400 even:shadow-blue-400"
+            >
                     <Image src={source} width="64px" height="64px" loading="lazy" alt={title} />
                     <h3 className='font-light'>
                         {title}
                     </h3>
                 </div>
-            )
-
-            )
-        }
+            ))}
     </div>
         </div>
       
     </div>
-  )
-}
+  );
+};
 
 export default Experience;

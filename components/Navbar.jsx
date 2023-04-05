@@ -13,12 +13,16 @@ const Navbar = () => {
   const [navigation, setNavigation] = useState(false);
   const [pageScroll, setPageScroll] = useState(false);
 
-  useEffect(() => {
-    const sub = window.addEventListener("scroll", () =>
-      setPageScroll(window.scrollY >= 90)
-    );
+  useEffect(() =>  function handleScroll() {
+    if (window.pageYOffset > 60) {
+      setPageScroll(true);
+    } else {
+      setPageScroll(false);
+    }
 
-    return sub;
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+ 
   }, []);
 
   const links = [
@@ -46,8 +50,8 @@ const Navbar = () => {
 
   return (
     <div
-      className={`w-full h-20 z-10 fixed bg-white text-black duration-300 ease-in ${
-        pageScroll && "bg-black text-[#fff]"
+      className={`w-full h-20 z-10 fixed duration-300 ease-in ${
+        pageScroll ? "bg-black text-[#fff]" :  " bg-white text-black"
       }`}
     >
       <div className="flex justify-between items-center w-full h-full max-w-screen-xl mx-auto p-4">
