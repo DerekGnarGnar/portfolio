@@ -14,14 +14,14 @@ const Navbar = () => {
   const [pageScroll, setPageScroll] = useState(false);
 
   useEffect(() =>  function handleScroll() {
-    if (document.pageYOffset > 60) {
+    if (window.pageYOffset > 60) {
       setPageScroll(true);
     } else {
       setPageScroll(false);
     }
 
-    document.addEventListener("scroll", handleScroll);
-    return () =>document.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () =>window.removeEventListener("scroll", handleScroll);
  
   }, []);
 

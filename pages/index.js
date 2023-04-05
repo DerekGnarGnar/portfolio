@@ -1,4 +1,4 @@
-import Head from "next/head";
+
 import About from "../components/About";
 import Experience from "../components/Experience";
 import HomePage from "../components/HomePage";
