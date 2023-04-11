@@ -12,10 +12,8 @@ import {
 const Navbar = () => {
   const [navigation, setNavigation] = useState(false);
   const [pageScroll, setPageScroll] = useState(false);
-  console.log('hi3');
 
   const handleScroll = () => {
-    console.log(window, window.scrollY);
     if (window.scrollY > 60) {
       setPageScroll(true);
     } else {
@@ -23,10 +21,9 @@ const Navbar = () => {
     }
   }
 
-  useEffect(() =>  {
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () =>window.removeEventListener("scroll", handleScroll);
- 
   }, []);
 
   const links = [
