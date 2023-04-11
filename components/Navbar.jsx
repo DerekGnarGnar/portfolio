@@ -12,16 +12,18 @@ import {
 const Navbar = () => {
   const [navigation, setNavigation] = useState(false);
   const [pageScroll, setPageScroll] = useState(false);
-  console.log('hi');
+  console.log('hi3');
 
-  useEffect(() =>  function handleScroll() {
+  const handleScroll = () => {
     console.log(window, window.scrollY);
     if (window.scrollY > 60) {
       setPageScroll(true);
     } else {
       setPageScroll(false);
     }
+  }
 
+  useEffect(() =>  {
     window.addEventListener("scroll", handleScroll);
     return () =>window.removeEventListener("scroll", handleScroll);
  
