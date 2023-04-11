@@ -14,7 +14,8 @@ const Navbar = () => {
   const [pageScroll, setPageScroll] = useState(false);
 
   useEffect(() =>  function handleScroll() {
-    if (window.pageYOffset > 60) {
+    console.log(window, window.scrollY);
+    if (window.scrollY > 60) {
       setPageScroll(true);
     } else {
       setPageScroll(false);
